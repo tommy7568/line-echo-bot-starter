@@ -23,7 +23,7 @@ app.post('/', function (req, res) {
         if (type === 'text'){
             let text = event.message.text
             if (text == "hi"){
-                sendMessage(replayToken,type)
+                sendMessage(replayToken,"You said hi")
             }else{
                 sendMessage(replayToken,text)
             }
