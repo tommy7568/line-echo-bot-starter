@@ -20,17 +20,17 @@ app.post('/', function (req, res) {
     events.forEach((event) => {
         let replayToken = event.replyToken
         let type = event.message.type
-        if (type === 'text'){
+        if (type === 'text'){  //如果型態是text
             let text = event.message.text
-            if (text == "hi"){
-                sendMessage(replayToken,"You said hi")
-            }else{
-                sendMessage(replayToken,text)
-            }
-            //sendMessage(replayToken,type)
-            //sendMessage(replayToken,text)
+            //if (text == "hi"){  
+                //sendMessage(replayToken,"You said hi")
+            //}else{
+                //sendMessage(replayToken,text)
+            //}
+            
+            sendMessage(replayToken,"你說 " + text)
         } else {
-            sendMessage(replayToken,type)
+            sendMessage(replayToken,type) //回傳收到的資料型態
         }
         
     })
