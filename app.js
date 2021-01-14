@@ -23,7 +23,7 @@ app.post('/', function (req, res) {
         if (type === 'text'){
             let text = event.message.text
             sendMessage(replayToken,type)
-            sendMessage(replayToken,text)
+            //sendMessage(replayToken,text)
         } else {
             sendMessage(replayToken,type)
         }
